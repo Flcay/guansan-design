@@ -229,6 +229,15 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
   .rv{opacity:1;transform:none}
   .rv-clip .inner{transform:none}
 }
+/* 落地案例卡片式展开 */
+.case{margin-bottom:120px}
+.more-wrap{display:grid;grid-template-rows:0fr;transition:grid-template-rows .8s cubic-bezier(.2,.75,.25,1),margin-top .8s}
+.more-wrap>div{overflow:hidden;min-height:0}
+.case.open .more-wrap{grid-template-rows:1fr;margin-top:18px}
+.expand-btn{display:flex;align-items:center;gap:10px;margin:38px auto 0;background:none;border:1px solid rgba(20,40,32,.28);border-radius:999px;padding:13px 32px;font-family:var(--serif);font-size:13px;letter-spacing:.32em;text-indent:.32em;color:var(--ink);cursor:pointer;transition:border-color .4s,color .4s,background .4s}
+.expand-btn:hover{border-color:var(--gold);color:var(--gold)}
+.expand-btn .arr{display:inline-block;transition:transform .5s;font-family:var(--latin)}
+.case.open .expand-btn .arr{transform:rotate(180deg)}
 </style>
 </head>
 <body>
@@ -373,16 +382,21 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">在现代建筑的几何秩序之外，植入一片可游可居的自然花园。流水景墙与大草坪构成庭院的呼吸空间，树影掠过素色墙面，黄昏时分，暖色灯光从室内漫出，建筑、花园与生活在此融为一体。</p>
     <div class="gallery g12">
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/qinghui/02.jpg" alt="和悦清晖园流水景墙"><span class="cap">流水景墙 · 树影长廊</span></div>
-      <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/qinghui/01.jpg" alt="和悦清晖园花园"></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/qinghui/04.jpg" alt="和悦清晖园庭院"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/qinghui/05.jpg" alt="和悦清晖园黄金时刻"><span class="cap">黄金时刻 · 建筑与花园</span></div>
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/qinghui/03.jpg" alt="和悦清晖园小径"></div>
-      <div class="ph g-p4 ar-p3 rv"><img src="assets2/land/qinghui/06.jpg" alt="和悦清晖园夜景"></div>
-      <div class="ph g-p4 ar-p3 rv d1"><img src="assets2/land/qinghui/07.jpg" alt="和悦清晖园夜景灯光"></div>
-      <div class="ph g-p4 ar-p3 rv d2"><img src="assets2/land/qinghui/08.jpg" alt="和悦清晖园户外"></div>
-      <div class="ph g-p4 ar-p3 rv d3"><img src="assets2/land/qinghui/09.jpg" alt="和悦清晖园庭院夜景"></div>
+      <div class="ph g-4 ar-half rv"><img src="assets2/land/qinghui/02.jpg" alt="和悦清晖园流水景墙"></div>
+      <div class="ph g-4 ar-half rv d1"><img src="assets2/land/qinghui/05.jpg" alt="和悦清晖园黄金时刻"><span class="cap">黄金时刻 · 建筑与花园</span></div>
+      <div class="ph g-4 ar-half rv d2"><img src="assets2/land/qinghui/03.jpg" alt="和悦清晖园小径"></div>
     </div>
+    <div class="more-wrap">
+      <div class="gallery g12">
+        <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/qinghui/01.jpg" alt="和悦清晖园花园"></div>
+        <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/qinghui/04.jpg" alt="和悦清晖园庭院"></div>
+        <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/qinghui/06.jpg" alt="和悦清晖园夜景"></div>
+        <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/qinghui/07.jpg" alt="和悦清晖园夜景灯光"></div>
+        <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/qinghui/08.jpg" alt="和悦清晖园户外"></div>
+        <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/qinghui/09.jpg" alt="和悦清晖园庭院夜景"></div>
+      </div>
+    </div>
+    <button class="expand-btn rv" data-total="9"><span class="txt">展开全部 9 张</span><span class="arr">↓</span></button>
   </article>
 
   <!-- 02 中大吴庄 -->
@@ -397,11 +411,16 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">在大树林下辟出一方静谧的苔庭。黑色砾石小径蜿蜒穿过苔藓与黑山石，竹篱围合、石灯静立，阳光从树冠筛下，在苔面上缓慢移动。时间在这里被放慢，每一步都踩在安静的绿意上。</p>
     <div class="gallery g12">
-      <div class="ph g-2 ar-p3 rv"><img src="assets2/land/wuzhuang/01.jpg" alt="中大吴庄林下苔庭"><span class="cap">大树之下 · 苔庭</span></div>
-      <div class="ph g-2 ar-p3 rv d1"><img src="assets2/land/wuzhuang/03.jpg" alt="中大吴庄竹篱"></div>
-      <div class="ph g-2 ar-p3 rv"><img src="assets2/land/wuzhuang/05.jpg" alt="中大吴庄砾石小径"></div>
-      <div class="ph g-2 ar-p3 rv d1"><img src="assets2/land/wuzhuang/06.jpg" alt="中大吴庄石径苔痕"></div>
+      <div class="ph g-2 ar-half rv"><img src="assets2/land/wuzhuang/01.jpg" alt="中大吴庄林下苔庭"><span class="cap">大树之下 · 苔庭</span></div>
+      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/wuzhuang/05.jpg" alt="中大吴庄砾石小径"></div>
     </div>
+    <div class="more-wrap">
+      <div class="gallery g12">
+        <div class="ph g-2 ar-p3 rv"><img src="assets2/land/wuzhuang/03.jpg" alt="中大吴庄竹篱"></div>
+        <div class="ph g-2 ar-p3 rv d1"><img src="assets2/land/wuzhuang/06.jpg" alt="中大吴庄石径苔痕"></div>
+      </div>
+    </div>
+    <button class="expand-btn rv" data-total="4"><span class="txt">展开全部 4 张</span><span class="arr">↓</span></button>
   </article>
 
   <!-- 03 绍兴落雁别墅 -->
@@ -416,15 +435,21 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">依自然山势而建的野趣庭院。天然毛石墙与蕨类、绣球、苔藓自由生长，仿佛建筑是从这片山林中长出来的。夜里由室内望向花园，灯光温柔地勾出石墙与植物的轮廓，山居的诗意尽在这一窗之内。</p>
     <div class="gallery g12">
-      <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/luoyan/01.jpg" alt="绍兴落雁别墅石墙"><span class="cap">天然石墙 · 山居</span></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/luoyan/02.jpg" alt="落雁别墅蕨类"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/luoyan/03.jpg" alt="落雁别墅庭院"></div>
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/luoyan/06.jpg" alt="绍兴落雁别墅庭院全景"><span class="cap">石墙、苔痕与绣球</span></div>
-      <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/luoyan/04.jpg" alt="落雁别墅夜景"></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/luoyan/05.jpg" alt="落雁别墅夜景内望"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/luoyan/07.jpg" alt="落雁别墅夜色"></div>
+      <div class="ph g-4 ar-half rv"><img src="assets2/land/luoyan/06.jpg" alt="绍兴落雁别墅庭院全景"><span class="cap">石墙、苔痕与绣球</span></div>
+      <div class="ph g-4 ar-half rv d1"><img src="assets2/land/luoyan/01.jpg" alt="绍兴落雁别墅石墙"><span class="cap">天然石墙 · 山居</span></div>
+      <div class="ph g-4 ar-half rv d2"><img src="assets2/land/luoyan/04.jpg" alt="落雁别墅夜景"></div>
     </div>
+    <div class="more-wrap">
+      <div class="gallery g12">
+        <div class="ph g-2 ar-half rv"><img src="assets2/land/luoyan/02.jpg" alt="落雁别墅蕨类"></div>
+        <div class="ph g-2 ar-half rv d1"><img src="assets2/land/luoyan/03.jpg" alt="落雁别墅庭院"></div>
+        <div class="ph g-2 ar-half rv"><img src="assets2/land/luoyan/05.jpg" alt="落雁别墅夜景内望"></div>
+        <div class="ph g-2 ar-half rv d1"><img src="assets2/land/luoyan/07.jpg" alt="落雁别墅夜色"></div>
+      </div>
+    </div>
+    <button class="expand-btn rv" data-total="7"><span class="txt">展开全部 7 张</span><span class="arr">↓</span></button>
   </article>
+
   <!-- 04 萧山九章赋 -->
   <article class="case">
     <div class="case-head rv">
@@ -437,19 +462,23 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">锦鲤池、大草坪与现代住宅构成一座明亮的家庭庭院。水池中游鱼可数，草坪承接孩子的奔跑，落地玻璃把室内外连成一片。当夜幕降临，池底灯光亮起，庭院又化作另一种安静的模样。</p>
     <div class="gallery g12">
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/jiuzhang/01.jpg" alt="萧山九章赋锦鲤池"><span class="cap">锦鲤池 · 现代住宅</span></div>
-      <div class="ph g-2 ar-half rv"><img src="assets2/land/jiuzhang/02.jpg" alt="九章赋草坪"></div>
-      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/jiuzhang/03.jpg" alt="九章赋庭院"></div>
-      <div class="ph g-8 ar-32 rv"><img src="assets2/land/jiuzhang/04.jpg" alt="九章赋花园"></div>
-      <div class="ph g-4 ar-p3 rv d1"><img src="assets2/land/jiuzhang/06.jpg" alt="九章赋室内灯光"></div>
-      <div class="ph g-2 ar-half rv"><img src="assets2/land/jiuzhang/05.jpg" alt="九章赋户外"></div>
-      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/jiuzhang/07.jpg" alt="九章赋庭院夜景"></div>
-      <div class="ph g-8 ar-32 rv"><img src="assets2/land/jiuzhang/08.jpg" alt="九章赋水池夜景"></div>
-      <div class="ph g-4 ar-p3 rv d1"><img src="assets2/land/jiuzhang/10.jpg" alt="九章赋夜景"></div>
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/jiuzhang/09.jpg" alt="九章赋泳池夜景"></div>
+      <div class="ph g-2 ar-half rv"><img src="assets2/land/jiuzhang/01.jpg" alt="萧山九章赋锦鲤池"><span class="cap">锦鲤池 · 现代住宅</span></div>
+      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/jiuzhang/09.jpg" alt="九章赋泳池夜景"></div>
     </div>
+    <div class="more-wrap">
+      <div class="gallery g12">
+        <div class="ph g-2 ar-half rv"><img src="assets2/land/jiuzhang/02.jpg" alt="九章赋草坪"></div>
+        <div class="ph g-2 ar-half rv d1"><img src="assets2/land/jiuzhang/03.jpg" alt="九章赋庭院"></div>
+        <div class="ph g-8 ar-32 rv"><img src="assets2/land/jiuzhang/04.jpg" alt="九章赋花园"></div>
+        <div class="ph g-4 ar-p3 rv d1"><img src="assets2/land/jiuzhang/06.jpg" alt="九章赋室内灯光"></div>
+        <div class="ph g-2 ar-half rv"><img src="assets2/land/jiuzhang/05.jpg" alt="九章赋户外"></div>
+        <div class="ph g-2 ar-half rv d1"><img src="assets2/land/jiuzhang/07.jpg" alt="九章赋庭院夜景"></div>
+        <div class="ph g-8 ar-32 rv"><img src="assets2/land/jiuzhang/08.jpg" alt="九章赋水池夜景"></div>
+        <div class="ph g-4 ar-p3 rv d1"><img src="assets2/land/jiuzhang/10.jpg" alt="九章赋夜景"></div>
+      </div>
+    </div>
+    <button class="expand-btn rv" data-total="10"><span class="txt">展开全部 10 张</span><span class="arr">↓</span></button>
   </article>
-
 
   <!-- 05 室内景观 -->
   <article class="case">
@@ -463,11 +492,16 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">把山水意境搬进室内。天光之下，水墨竹影的玻璃屏风与片石苔藓构成室内的视觉焦点；楼梯转角的盆景、石墙与月洞窗，让原本过渡性的空间也有了驻足观赏的理由。方寸室内，亦见山林。</p>
     <div class="gallery g12">
-      <div class="ph g-4 ar-p3 rv"><img src="assets2/land/indoor/01.jpg" alt="室内竹影屏风"><span class="cap">天光 · 竹影屏风</span></div>
-      <div class="ph g-8 ar-32 rv d1"><img src="assets2/land/indoor/02.jpg" alt="室内景观石墙"></div>
-      <div class="ph g-2 ar-half rv"><img src="assets2/land/indoor/03.jpg" alt="室内月洞窗"></div>
-      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/indoor/04.jpg" alt="楼梯盆景"></div>
+      <div class="ph g-2 ar-half rv"><img src="assets2/land/indoor/01.jpg" alt="室内竹影屏风"><span class="cap">天光 · 竹影屏风</span></div>
+      <div class="ph g-2 ar-half rv d1"><img src="assets2/land/indoor/02.jpg" alt="室内景观石墙"></div>
     </div>
+    <div class="more-wrap">
+      <div class="gallery g12">
+        <div class="ph g-2 ar-half rv"><img src="assets2/land/indoor/03.jpg" alt="室内月洞窗"></div>
+        <div class="ph g-2 ar-half rv d1"><img src="assets2/land/indoor/04.jpg" alt="楼梯盆景"></div>
+      </div>
+    </div>
+    <button class="expand-btn rv" data-total="4"><span class="txt">展开全部 4 张</span><span class="arr">↓</span></button>
   </article>
 </section>
 
@@ -634,5 +668,17 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
 })();
 </script>
 </section>
+<script>
+/* 落地案例卡片展开/收起 */
+(function(){
+  document.querySelectorAll('.expand-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.case');
+      var open = card.classList.toggle('open');
+      btn.querySelector('.txt').textContent = open ? '收起' : '展开全部 ' + btn.dataset.total + ' 张';
+    });
+  });
+})();
+</script>
 </body>
 </html>
