@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>西溪·海望山郡 — 观叁设计案例</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231e3a32'/%3E%3Cpath d='M14 46 L32 18 L50 46' stroke='%23f4f0e6' stroke-width='3' fill='none'/%3E%3Ccircle cx='32' cy='44' r='3' fill='%23a9884f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://miaoda.feishu.cn">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+:root{
+  --ink:#1e3a32; --ink-deep:#12251f; --ink-soft:#2c4b41;
+  --rice:#f4f0e6; --paper:#eae4d3; --line:#d7cfb9;
+  --gold:#a9884f; --gold-soft:#c2a472; --text:#2d2d27; --muted:#7a7464;
+  --serif:"Noto Serif SC","Songti SC","SimSun",serif;
+  --sans:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+  --latin:"Cormorant Garamond","Noto Serif SC",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--rice);line-height:1.8;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--ink);color:var(--rice)}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.dnav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;transition:background .5s,padding .5s,box-shadow .5s}
+.dnav.scrolled{background:rgba(244,240,230,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:12px 56px}
+.dnav .logo{position:relative;width:44px;height:56px}
+.dnav .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;transition:opacity .5s}
+.dnav .logo .lg-ink{opacity:0}
+.dnav.scrolled .logo .lg-cream{opacity:0}
+.dnav.scrolled .logo .lg-ink{opacity:1}
+.dnav .dnav-links{display:flex;gap:30px;align-items:center}
+.dnav .dnav-links a{font-size:12px;letter-spacing:.22em;color:var(--rice);opacity:.85;transition:opacity .3s,color .5s;position:relative}
+.dnav.scrolled .dnav-links a{color:var(--ink)}
+.dnav .dnav-links a:hover{opacity:1}
+.dnav .dnav-links a .ar{display:inline-block;transition:transform .4s;margin-right:6px}
+.dnav .dnav-links a:hover .ar{transform:translateX(-4px)}
+.hero{position:relative;height:78vh;min-height:520px;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink-deep)}
+.hero .hbg{position:absolute;inset:-6%;background-size:cover;background-position:center;will-change:transform}
+.hero .hov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,37,31,.3) 0%,rgba(18,37,31,.15) 45%,rgba(18,37,31,.82) 100%)}
+.hero .hcontent{position:relative;z-index:2;color:var(--rice);padding:0 56px 64px;max-width:1200px;margin:0 auto;width:100%}
+.hero .kicker{font-family:var(--latin);letter-spacing:.42em;font-size:13px;color:var(--gold-soft);margin-bottom:22px}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,5.2vw,64px);font-weight:600;letter-spacing:.09em;line-height:1.3}
+.hero .en{font-family:var(--latin);letter-spacing:.18em;font-size:17px;opacity:.72;margin-top:12px}
+.hero .meta{display:flex;gap:28px;margin-top:22px;font-size:12px;letter-spacing:.16em;opacity:.78;flex-wrap:wrap}
+.hero .meta span::before{content:"· ";color:var(--gold-soft)}
+.wrap{max-width:1200px;margin:0 auto;padding:110px 56px}
+.intro-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:80px;align-items:start}
+.intro-grid .zh{font-family:var(--serif);font-size:20px;line-height:2.15;color:#37372f;letter-spacing:.02em}
+.intro-grid .zh:first-letter{color:var(--gold)}
+.intro-grid .en{font-family:var(--latin);font-size:17px;line-height:1.9;color:var(--muted);margin-top:26px;font-style:italic}
+.data{border-top:1px solid var(--line)}
+.data .di{display:flex;justify-content:space-between;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:13px}
+.data .di .k{letter-spacing:.18em;color:var(--muted);white-space:nowrap}
+.data .di .v{color:var(--ink);text-align:right}
+.gallery{margin-top:110px}
+.gallery .gsec{font-family:var(--latin);letter-spacing:.4em;font-size:12px;color:var(--gold);text-align:center;margin-bottom:50px}
+.grow{display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-bottom:18px}
+.grow .ph{overflow:hidden;position:relative;background:var(--paper)}
+.grow .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s cubic-bezier(.2,.75,.25,1)}
+.grow .ph:hover img{transform:scale(1.05)}
+.ph.c-full{grid-column:span 12}
+.ph.c-half{grid-column:span 6}
+.ph.c-third{grid-column:span 4}
+.ph.c-p{grid-column:span 4;grid-column-start:5}
+.ph.c-wide8{grid-column:span 8;grid-column-start:3}
+.ph.ar-wide{aspect-ratio:16/9}
+.ph.ar-half{aspect-ratio:4/3}
+.ph.ar-32{aspect-ratio:3/2}
+.ph.ar-p3{aspect-ratio:3/4}
+.ph.ar-pano{aspect-ratio:21/9}
+.highlights{background:var(--ink-deep);color:var(--rice);padding:110px 56px}
+.highlights .inner{max-width:1200px;margin:0 auto}
+.highlights .ht{font-family:var(--latin);letter-spacing:.4em;font-size:12px;color:var(--gold-soft);margin-bottom:60px;text-align:center}
+.hl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.hl{padding:0 40px;border-right:1px solid rgba(244,240,230,.18)}
+.hl:first-child{padding-left:0}.hl:last-child{border-right:none;padding-right:0}
+.hl .n{font-family:var(--latin);font-size:30px;color:var(--gold-soft);margin-bottom:22px}
+.hl p{font-size:14px;color:rgba(244,240,230,.72);line-height:2}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line)}
+.pager a{background:var(--rice);padding:56px 56px;transition:background .5s;position:relative;overflow:hidden}
+.pager a:hover{background:var(--paper)}
+.pager .pl{font-size:11px;letter-spacing:.3em;color:var(--gold);margin-bottom:12px}
+.pager .pt{font-family:var(--serif);font-size:25px;color:var(--ink);letter-spacing:.06em}
+.pager .pen{font-family:var(--latin);font-size:14px;color:var(--muted);letter-spacing:.12em;margin-top:4px}
+.pager a.next{text-align:right}
+.pager .pdir{font-size:12px;letter-spacing:.2em;color:var(--muted);margin-bottom:10px}
+.pager a .slide-line{position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--gold);transition:width .6s}
+.pager a:hover .slide-line{width:100%}
+.cfooter{background:var(--ink-deep);color:var(--rice);padding:90px 56px;text-align:center}
+.cfooter .fl{width:76px;margin:0 auto 30px}
+.cfooter h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:600;letter-spacing:.1em;margin-bottom:22px}
+.cfooter .cinfo{color:rgba(244,240,230,.66);font-size:14px;line-height:2.2;letter-spacing:.08em}
+.cfooter .cinfo a{color:var(--gold-soft)}
+.cfooter .copyright{margin-top:44px;padding-top:26px;border-top:1px solid rgba(244,240,230,.14);font-size:11px;letter-spacing:.22em;color:rgba(244,240,230,.4)}
+.rv{opacity:0;transform:translateY(40px);transition:opacity 1.1s cubic-bezier(.2,.75,.25,1),transform 1.1s cubic-bezier(.2,.75,.25,1)}
+.rv.in{opacity:1;transform:translateY(0)}
+@media (max-width:1024px){
+  .intro-grid{grid-template-columns:1fr;gap:50px}
+  .hl-grid{grid-template-columns:1fr}
+  .hl{border-right:none;border-bottom:1px solid rgba(244,240,230,.18);padding:34px 0}
+  .hl:last-child{border-bottom:none}
+}
+@media (max-width:768px){
+  .dnav,.dnav.scrolled{padding:14px 22px}
+  .dnav .dnav-links{gap:16px}
+  .dnav .dnav-links a span.txt{display:none}
+  .hero .hcontent{padding:0 22px 40px}
+  .wrap{padding:70px 22px}
+  .highlights{padding:70px 22px}
+  .cfooter{padding:70px 22px}
+  .grow{grid-template-columns:1fr}
+  .grow .ph{grid-column:span 1!important;grid-column-start:auto!important}
+  .grow .ph.ar-half,.grow .ph.ar-32{aspect-ratio:16/10}
+  .grow .ph.ar-p3{aspect-ratio:3/4}
+  .pager{grid-template-columns:1fr}
+  .pager a.next{text-align:left}
+  .pager a{padding:40px 22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="dnav" id="dnav">
+  <a class="logo" href="index.html#hero"><img class="lg-cream" src="assets2/logo/logo-cream.png" alt="观叁设计"><img class="lg-ink" src="assets2/logo/logo-ink.png" alt="观叁设计"></a>
+  <div class="dnav-links">
+    <a href="index.html#eff"><span class="ar">←</span><span class="txt">返回案例集</span></a>
+    <a href="case-shiyu.html"><span class="ar">←</span><span class="txt">上一个</span></a>
+    <a href="case-guixiang.html"><span class="txt">下一个</span><span class="ar">→</span></a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hbg" id="hbg" style="background-image:url('assets2/eff/haiwang/01.jpg')"></div>
+  <div class="hov"></div>
+  <div class="hcontent">
+    <div class="kicker">CONCEPT PROJECT · 02 / 08</div>
+    <h1>西溪·海望山郡</h1>
+    <div class="en">HAIWANG HILL RESIDENCE</div>
+    <div class="meta"><span>浙江 · 杭州西溪</span><span>高端住宅景观</span><span>概念方案</span></div>
+  </div>
+</header>
+
+<section class="wrap">
+  <div class="intro-grid">
+    <div class="rv">
+      <div class="zh">西溪湿地畔的低密山居。方案以「临溪望山」为核心，将自然溪谷引入社区，架空层、溪畔花园与台地庭院层层递进。设计以平面图与多视角透视完整呈现从总图到细部的空间叙事，木平台、自然石岸与疏林草地共同构建可游可居的当代栖居。</div>
+      <div class="en">A low-density hillside residence by Xixi Wetland. A natural valley is introduced into the community, connecting stilted ground floors, streamside gardens and terraced courtyards. Wooden decks, natural stone banks and open meadows together shape a contemporary landscape of dwelling.</div>
+    </div>
+    <div class="data rv d1">
+      <div class="di"><span class="k">项目地点</span><span class="v">浙江 · 杭州西溪</span></div>
+      <div class="di"><span class="k">项目类型</span><span class="v">高端住宅景观</span></div>
+      <div class="di"><span class="k">项目状态</span><span class="v">概念方案</span></div>
+      <div class="di"><span class="k">设计机构</span><span class="v">观叁设计</span></div>
+      <div class="di"><span class="k">服务范围</span><span class="v">方案 · 深化 · 落地</span></div>
+    </div>
+  </div>
+  <div class="gallery"><div class="gsec">— GALLERY · 效果画廊 —</div><div class="grow"><div class="ph c-full ar-wide rv"><img src="assets2/eff/haiwang/01.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-p ar-p3 rv"><img src="assets2/eff/haiwang/02.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/03.jpg" alt="西溪·海望山郡"></div><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/04.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-full ar-wide rv"><img src="assets2/eff/haiwang/05.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/06.jpg" alt="西溪·海望山郡"></div><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/07.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-full ar-wide rv"><img src="assets2/eff/haiwang/08.jpg" alt="西溪·海望山郡"></div></div><div class="grow"><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/09.jpg" alt="西溪·海望山郡"></div><div class="ph c-half ar-half rv"><img src="assets2/eff/haiwang/10.jpg" alt="西溪·海望山郡"></div></div></div>
+</section>
+
+<section class="highlights">
+  <div class="inner">
+    <div class="ht rv">DESIGN HIGHLIGHTS · 设计亮点</div>
+    <div class="hl-grid"><div class="hl rv"><div class="n">01</div><p>引溪入园：自然式溪谷贯穿，石岸、浅滩与跨溪桥构成连续动线。</p></div><div class="hl rv"><div class="n">02</div><p>台地花园：顺应高差设置层层台地，每户拥有独立花园界面。</p></div><div class="hl rv"><div class="n">03</div><p>全周期图纸：从总图、平面到多视角透视，完整呈现设计推演。</p></div></div>
+  </div>
+</section>
+
+<nav class="pager">
+  <a class="prev" href="case-shiyu.html">
+    <div class="pdir">← PREVIOUS</div>
+    <div class="pl">概念方案</div>
+    <div class="pt">石盂寺室外景观提升改造</div>
+    <div class="pen">SHIYU TEMPLE LANDSCAPE</div>
+    <div class="slide-line"></div>
+  </a>
+  <a class="next" href="case-guixiang.html">
+    <div class="pdir">NEXT →</div>
+    <div class="pl">概念方案</div>
+    <div class="pt">绿城桂香园</div>
+    <div class="pen">GUIXIANG GARDEN</div>
+    <div class="slide-line"></div>
+  </a>
+</nav>
+
+<footer class="cfooter">
+  <div class="fl"><img src="assets2/logo/logo-cream.png" alt="观叁设计"></div>
+  <h2>期待，与您共筑一园</h2>
+  <div class="cinfo">
+    浙江省杭州市余杭区闲林街道嘉企路百子尖科技园C座05层C-508室<br>
+    电话 <a href="tel:13372551313">133 7255 1313</a>　·　邮箱 <a href="mailto:1260861544@qq.com">1260861544@qq.com</a>
+  </div>
+  <div class="copyright">© 2026 杭州观叁园林景观设计有限公司 · GUANSAN DESIGN</div>
+</footer>
+
+<script>
+(function(){
+  var dnav=document.getElementById('dnav');
+  var hbg=document.getElementById('hbg');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var ticking=false;
+  function onScroll(){
+    if(ticking)return;ticking=true;
+    requestAnimationFrame(function(){
+      var y=window.pageYOffset||document.documentElement.scrollTop;
+      dnav.classList.toggle('scrolled',y>60);
+      if(!reduce&&hbg&&y<window.innerHeight*1.2){hbg.style.transform='translateY('+(y*0.22)+'px)';}
+      ticking=false;
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
+  var rvs=document.querySelectorAll('.rv');
+  if(reduce||!('IntersectionObserver' in window)){rvs.forEach(function(el){el.classList.add('in');});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.1,rootMargin:'0px 0px -6% 0px'});
+    rvs.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
+</body>
+</html>
