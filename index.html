@@ -126,6 +126,8 @@ section{padding:130px 56px}
 .gallery{display:grid;gap:18px}
 .g12{grid-template-columns:repeat(12,1fr)}
 .g-wide{grid-column:span 12}
+/* 落地案例大图内收，避免占满整屏、避免小图被过度放大 */
+.g12 .g-wide{grid-column:3/span 8}
 .g-p3{grid-column:span 4}
 .g-p4{grid-column:span 3}
 .g-2{grid-column:span 6}
@@ -356,7 +358,7 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
       <div class="eyebrow rv">BUILT PROJECTS</div>
       <h2 class="rv d1">落地案例</h2>
     </div>
-    <div class="right rv d2">六个从图纸走到现场的真实庭院。我们记录下黄金时刻的光、夜间的灯，以及人在其中生活的样子——<b>实景，是设计最诚实的表达。</b></div>
+    <div class="right rv d2">五个从图纸走到现场的真实庭院。我们记录下黄金时刻的光、夜间的灯，以及人在其中生活的样子——<b>实景，是设计最诚实的表达。</b></div>
   </div>
 
   <!-- 01 和悦清晖园 -->
@@ -373,9 +375,9 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     <div class="gallery g12">
       <div class="ph g-wide ar-wide rv"><img src="assets2/land/qinghui/02.jpg" alt="和悦清晖园流水景墙"><span class="cap">流水景墙 · 树影长廊</span></div>
       <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/qinghui/01.jpg" alt="和悦清晖园花园"></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/qinghui/03.jpg" alt="和悦清晖园小径"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/qinghui/04.jpg" alt="和悦清晖园庭院"></div>
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/qinghui/05.jpg" alt="和悦清晖园黄金时刻"><span class="cap">黄金时刻 · 建筑与花园</span></div>
+      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/qinghui/04.jpg" alt="和悦清晖园庭院"></div>
+      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/qinghui/05.jpg" alt="和悦清晖园黄金时刻"><span class="cap">黄金时刻 · 建筑与花园</span></div>
+      <div class="ph g-wide ar-wide rv"><img src="assets2/land/qinghui/03.jpg" alt="和悦清晖园小径"></div>
       <div class="ph g-p4 ar-p3 rv"><img src="assets2/land/qinghui/06.jpg" alt="和悦清晖园夜景"></div>
       <div class="ph g-p4 ar-p3 rv d1"><img src="assets2/land/qinghui/07.jpg" alt="和悦清晖园夜景灯光"></div>
       <div class="ph g-p4 ar-p3 rv d2"><img src="assets2/land/qinghui/08.jpg" alt="和悦清晖园户外"></div>
@@ -395,12 +397,10 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
     <p class="case-intro rv">在大树林下辟出一方静谧的苔庭。黑色砾石小径蜿蜒穿过苔藓与黑山石，竹篱围合、石灯静立，阳光从树冠筛下，在苔面上缓慢移动。时间在这里被放慢，每一步都踩在安静的绿意上。</p>
     <div class="gallery g12">
-      <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/wuzhuang/01.jpg" alt="中大吴庄林下苔庭"><span class="cap">大树之下 · 苔庭</span></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/wuzhuang/02.jpg" alt="中大吴庄石组"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/wuzhuang/03.jpg" alt="中大吴庄砾石小径"></div>
-      <div class="ph g-p4 ar-p3 rv"><img src="assets2/land/wuzhuang/04.jpg" alt="中大吴庄石灯"></div>
-      <div class="ph g-p4 ar-p3 rv d1"><img src="assets2/land/wuzhuang/05.jpg" alt="中大吴庄苔痕"></div>
-      <div class="ph g-p4 ar-p3 rv d2"><img src="assets2/land/wuzhuang/06.jpg" alt="中大吴庄竹篱"></div>
+      <div class="ph g-2 ar-p3 rv"><img src="assets2/land/wuzhuang/01.jpg" alt="中大吴庄林下苔庭"><span class="cap">大树之下 · 苔庭</span></div>
+      <div class="ph g-2 ar-p3 rv d1"><img src="assets2/land/wuzhuang/03.jpg" alt="中大吴庄竹篱"></div>
+      <div class="ph g-2 ar-p3 rv"><img src="assets2/land/wuzhuang/05.jpg" alt="中大吴庄砾石小径"></div>
+      <div class="ph g-2 ar-p3 rv d1"><img src="assets2/land/wuzhuang/06.jpg" alt="中大吴庄石径苔痕"></div>
     </div>
   </article>
 
@@ -450,30 +450,11 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     </div>
   </article>
 
-  <!-- 05 金色池塘 -->
+
+  <!-- 05 室内景观 -->
   <article class="case">
     <div class="case-head rv">
       <div class="cno">05 / BUILT</div>
-      <div>
-        <h3>金色池塘</h3>
-        <div class="cen">GOLDEN POND COURTYARD</div>
-        <div class="meta"><span>浙江 · 杭州</span><span>夜间灯光庭院</span><span>已落地</span></div>
-      </div>
-    </div>
-    <p class="case-intro rv">一座为夜晚而设计的庭院。木塑围栏围合出私密的花园，发光踏石与灯带勾勒出步行的边界，暖色光线从植物根部漫起，照亮花境与归家的路。傍晚归家，灯火已在院中安静等候。</p>
-    <div class="gallery g12">
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/jinse/03.jpg" alt="金色池塘夜景"><span class="cap">夜色中的庭院</span></div>
-      <div class="ph g-p3 ar-p3 rv"><img src="assets2/land/jinse/01.jpg" alt="金色池塘花园"></div>
-      <div class="ph g-p3 ar-p3 rv d1"><img src="assets2/land/jinse/02.jpg" alt="金色池塘灯带"></div>
-      <div class="ph g-p3 ar-p3 rv d2"><img src="assets2/land/jinse/05.jpg" alt="金色池塘发光踏石"></div>
-      <div class="ph g-wide ar-wide rv"><img src="assets2/land/jinse/04.jpg" alt="金色池塘夜景灯光"><span class="cap">灯带 · 花境</span></div>
-    </div>
-  </article>
-
-  <!-- 06 室内景观 -->
-  <article class="case">
-    <div class="case-head rv">
-      <div class="cno">06 / BUILT</div>
       <div>
         <h3>室内景观</h3>
         <div class="cen">INDOOR LANDSCAPE</div>
@@ -494,7 +475,7 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
 <section id="eff">
   <div class="sec-head">
     <div class="left">
-      <div class="eyebrow rv">CONCEPT PROJECTS</div>
+      <div class="eyebrow rv">DESIGN PROJECTS</div>
       <h2 class="rv d1">效果案例</h2>
     </div>
     <div class="right rv d2">八个正在生长中的设计方案。点击卡片进入独立案例页，查看完整平面图、多角度效果图与设计说明。</div>
@@ -503,42 +484,42 @@ footer .fbrand{letter-spacing:.3em;color:rgba(244,240,230,.75)}
     <a class="eff-card rv" href="case-shiyu.html">
       <img src="assets2/eff/shiyu/01.jpg" alt="石盂寺">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>01 · 概念方案</span><span class="arrow"></span></div><h4>石盂寺室外景观提升改造</h4><div class="cen">SHIYU TEMPLE</div></div>
+      <div class="ci"><div class="tag"><span>01 · 设计方案</span><span class="arrow"></span></div><h4>石盂寺室外景观提升改造</h4><div class="cen">SHIYU TEMPLE</div></div>
     </a>
     <a class="eff-card rv d1" href="case-haiwang.html">
-      <img src="assets2/eff/haiwang/01.jpg" alt="海望山郡">
+      <img src="assets2/eff/haiwang/03.jpg" alt="海望山郡">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>02 · 概念方案</span><span class="arrow"></span></div><h4>西溪·海望山郡</h4><div class="cen">HAIWANG HILL RESIDENCE</div></div>
+      <div class="ci"><div class="tag"><span>02 · 设计方案</span><span class="arrow"></span></div><h4>西溪·海望山郡</h4><div class="cen">HAIWANG HILL RESIDENCE</div></div>
     </a>
     <a class="eff-card rv d2" href="case-guixiang.html">
       <img src="assets2/eff/guixiang/07.jpg" alt="绿城桂香园">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>03 · 概念方案</span><span class="arrow"></span></div><h4>绿城桂香园</h4><div class="cen">GUIXIANG GARDEN</div></div>
+      <div class="ci"><div class="tag"><span>03 · 设计方案</span><span class="arrow"></span></div><h4>绿城桂香园</h4><div class="cen">GUIXIANG GARDEN</div></div>
     </a>
     <a class="eff-card rv d3" href="case-jiuzhang.html">
       <img src="assets2/eff/jiuzhang/01.jpg" alt="九章赋别墅庭院">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>04 · 概念方案</span><span class="arrow"></span></div><h4>九章赋别墅庭院</h4><div class="cen">JIUZHANGFU COURTYARD</div></div>
+      <div class="ci"><div class="tag"><span>04 · 设计方案</span><span class="arrow"></span></div><h4>九章赋别墅庭院</h4><div class="cen">JIUZHANGFU COURTYARD</div></div>
     </a>
     <a class="eff-card rv" href="case-xihu.html">
       <img src="assets2/eff/xihu/03.jpg" alt="西湖墅">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>05 · 概念方案</span><span class="arrow"></span></div><h4>西湖墅</h4><div class="cen">XIHU VILLA</div></div>
+      <div class="ci"><div class="tag"><span>05 · 设计方案</span><span class="arrow"></span></div><h4>西湖墅</h4><div class="cen">XIHU VILLA</div></div>
     </a>
     <a class="eff-card rv d1" href="case-lanjing.html">
       <img src="assets2/eff/lanjing/03.jpg" alt="蓝景湾">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>06 · 概念方案</span><span class="arrow"></span></div><h4>蓝景湾</h4><div class="cen">BLUE BAY VILLA</div></div>
+      <div class="ci"><div class="tag"><span>06 · 设计方案</span><span class="arrow"></span></div><h4>蓝景湾</h4><div class="cen">BLUE BAY VILLA</div></div>
     </a>
     <a class="eff-card rv d2" href="case-hesong.html">
       <img src="assets2/eff/hesong/02.jpg" alt="河颂映象府">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>07 · 概念方案</span><span class="arrow"></span></div><h4>河颂映象府露台</h4><div class="cen">HESONG TERRACE</div></div>
+      <div class="ci"><div class="tag"><span>07 · 设计方案</span><span class="arrow"></span></div><h4>河颂映象府露台</h4><div class="cen">HESONG TERRACE</div></div>
     </a>
     <a class="eff-card rv d3" href="case-wanzong.html">
       <img src="assets2/eff/wanzong/04.jpg" alt="万纵办公">
       <div class="veil"></div>
-      <div class="ci"><div class="tag"><span>08 · 概念方案</span><span class="arrow"></span></div><h4>万纵信息办公区域</h4><div class="cen">WANZONG OFFICE</div></div>
+      <div class="ci"><div class="tag"><span>08 · 设计方案</span><span class="arrow"></span></div><h4>万纵信息办公区域</h4><div class="cen">WANZONG OFFICE</div></div>
     </a>
   </div>
 </section>
